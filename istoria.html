@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">-->
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link rel="icon" href="img/ball.png" type="image/x-icon">
+  <title>Mundial</title>
+
+  
+<style>  
+
+@media screen and (min-width: 701px) and (max-width: 10000px){
+  
+.flexcontainer {
+  display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   flex-wrap: wrap;
+   flex-flow: row wrap;
+   align-content: flex-end;
+   
+}
+
+.wrapper {
+	padding: 5px;
+	max-width: 960px;
+	width: 95%;
+	margin: 20px auto;
+  }
+  .dropcap {
+float: left;
+font-size: 400%;
+color: #116e08;
+margin: -13px 7px -13px 0;
+}
+::selection {
+background-color: #1e7e22;
+color: #f1f1f1;
+}
+
+p { text-align: center; }
+
+.figure {
+    border: 1px #080808 solid;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+  }
+.figcaption {
+    color: black;
+    font-style: italic;
+    padding: 2px;
+    text-align: left;
+  } 
+  H1 { text-align: center } 
+  H3 { text-align: center }
+  H4 { text-align: center }
+  H5 { text-align: center }
+  
+
+div.toc {text-align: center;
+  }
+
+ul { 
+	display: inline-block; 
+	text-align: left; 
+  color: #116e08;
+	}
+
+/*.image{
+  display: block;  
+  margin-left: auto;
+  margin-right: auto;
+  }*/
+  .image {
+width: 100%;
+overflow: hidden;
+}
+.image-colorize img {
+transition: transform .5s, filter 0.5s ease-in-out;
+filter: grayscale(100%);
+}
+.image-colorize:hover img {
+filter: grayscale(0);
+transform: scale(1.1);
+}
+.row {
+  display: flex;
+}
+
+/*.column {
+  flex: 50%;
+  padding: 5px;
+}*/
+.column {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: 5px 0;
+ }
+table, th, td {
+              border: 1px  black;
+              border-collapse: collapse;
+              border-spacing: 15px;
+              
+            }
+            th, td {
+              padding: 5px;
+              text-align: center; 
+              font-style: italic;   
+            }
+}
+body{ /*background-color: #82dd82;*/
+  background-color: rgb(103, 248, 90);
+  
+}
+
+.navbar {
+overflow: hidden;
+background-color: rgb(43, 201, 29);
+position: fixed;
+top: 0;
+width: 100%;
+}
+
+.navbar a {
+float: right;
+display: block;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+
+.navbar a:hover {
+background: #ddd;
+color: black;
+}
+
+header {
+color: rgba(14, 13, 13, 0.658);
+padding: 0 10px;
+/*text-shadow: 2px 2px 2px #07690c;*/
+text-shadow: 0px 0px 25px rgb(206, 238, 209);
+
+}
+@media screen and (min-width: 350px) and (max-width: 700px) {
+
+.flexcontainer {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   flex-wrap: wrap;
+   flex-flow: row wrap;
+   align-content: flex-end;
+   
+}
+
+.wrapper {
+	padding: 5px;
+	max-width: 960px;
+	width: 100%;
+	margin: 20px auto;  
+}
+.figure {
+  text-align: center;
+  font-size: 0.75em;
+
+  }
+  
+body{ /*background-color: #82dd82;*/
+  background-color: rgb(103, 248, 90);
+}
+ 
+p { text-align: center; }
+
+div.parent {
+	text-align: center;
+	}
+
+ul { 
+	display: inline-block; 
+	text-align: left; 
+	}
+
+.figcaption {
+    background-color: rgb(41, 145, 28);
+    color: black;
+    font-style: italic;
+    padding: 2px;
+    text-align: center;
+    font-size: 0.85em;
+  }
+H1 { text-align: center;
+  text-shadow: 0px 0px 25px rgb(38, 223, 57); } 
+H2 { text-align: center } 
+H3 { text-align: center }
+H4 { text-align: center }
+H5 { text-align: center }
+
+H1 { font-size: x-large} 
+H2 { font-size: large  } 
+H3 { font-size: large  }
+H4 { font-size: medium }
+H5 { font-size: small  }
+
+header {
+color: rgba(14, 13, 13, 0.658);
+padding: 0 10px;
+/*text-shadow: 2px 2px 2px #07690c;*/
+text-shadow: 0px 0px 25px rgb(206, 238, 209);
+
+}
+.image{
+  display: block;  
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  }
+.toc{
+    font-size: 0.85em;
+  }
+.row {
+  display: flex;
+ }
+/*.column {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: 5px 0;
+ }*/
+ .column {
+  flex: 50%;
+  padding: 5px;
+}
+ table, th, td {
+    
+              border: 1px black;
+              border-collapse: collapse;
+              border-spacing: 15px;
+              
+            }
+            th, td {
+              padding: 5px;
+              text-align: center; 
+              font-style: italic;   
+            }
+	
+}
+
+.navbar {
+overflow: hidden;
+background-color: rgb(43, 201, 29);
+position: fixed;
+top: 0;
+width: 100%;
+}
+
+.navbar a {
+float: right;
+display: block;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+
+.navbar a:hover {
+background: #ddd;
+color: black;
+}
+</style>
+</head>
+<body>
+  
+  
+  <div class="navbar"> 
+    <a href="index.html">Αρχική σελίδα</a>
+    <a href="istoria.html">Ιστορία</a>
+    <a href="contact.html">Επικοινωνία</a>
+    <a href="registration.html">Εγγραφή</a>
+   
+  </div>
+    
+  
+  <div class="flexcontainer">
+    <div class="wrapper">
+  <br><br><br><br> 
+    <header>
+      <h1>Παγκόσμιο κύπελλο</h1>
+      <h5>Πόσα στα αλήθεια ξέρουμε για το μεγαλύτερο πρωτάθλημα ποδοσφαίρου;</h5>
+     
+    </header>   
+    
+    <div class="figure">  
+      <p><span class="dropcap">Α</span>ν και η πρώτη ποδοσφαιρική ομάδα στον κόσμο δημιουργήθηκε το 1857 (Sheffield Football Club), μόλις το 1905 έγινε η πρώτη συζήτηση για τη δημιουργία ενός παγκόσμιου ποδοσφαιρικού πρωταθλήματος από τη FIFA (Παγκόσμια Ποδοσφαιρική Ομοσπονδία).
+
+        Το ποδόσφαιρο έκανε την πρώτη παγκόσμια εμφάνισή του στους Ολυμπιακούς Αγώνες του 1908 στο Λονδίνο, αγώνες οι οποίοι δεν στέφθηκαν με επιτυχία. Όμως 13 χρόνια αργότερα ο Ζιλ Ριμέ εκλέχθηκε πρόεδρος της FIFΑ και ονειρεύτηκε όλος ο πλανήτης να ενωθεί με μία ποδοσφαιρική μπάλα, επιδιώκοντας να μιλήσουν όλοι τη γλώσσα του ποδοσφαίρου. Έτσι το 1928, υπό την εποπτεία και προεδρία του Ριμέ, μία πενταμελής επιτροπή (Μπονέ, Μέισλ, Ντελονέ, Φερετί και Λίνεμαν) σχεδίασε τη δημιουργία του Πρώτου Παγκοσμίου Κυπέλλου. Οι προτάσεις, που διαδέχονταν η μία μετά την άλλη, εγκρίθηκαν και ο Μπονέ έγινε ο πρόεδρος της Οργανωτικής Επιτροπής του Παγκοσμίου Κυπέλλου. Η χώρα στην οποία αποφασίστηκε τελικά να διοργανωθεί το πρώτο παγκόσμιο κύπελλο ήταν η Ουρουγουάη, παρά τις αντιρρήσεις πολλών ευρωπαϊκών χωρών, οι οποίες απείλησαν με αποχή τους από τη διοργάνωση εάν αυτή διεξαγόταν σε χώρα της Λατινικής Αμερικής.
+        
+        Τελικώς, στις 7 Ιουλίου 1930 έγινε η πρώτη κλήρωση για τους τέσσερις ομίλους του Παγκοσμίου Κυπέλλου με μόνο 13 ομάδες να συμμετέχουν, ενώ 6 μέρες αργότερα το σφύριγμα του διαιτητή Ντομίνγκο Λομπάρντι ξεκίνησε τον αγώνα μεταξύ Μεξικού και Γαλλίας. Στο 19ο λεπτό ο Γάλλος Λοράν άνοιξε το σκορ και έγινε ο πρώτος παίκτης που σκόραρε σε παγκόσμιο κύπελλο, σε έναν αγώνα όπου οι Γάλλοι επικράτησαν τελικά με 4-1. Η ιστορία αρχίζει να γράφεται...</p>
+        <div class="image"><div class="image-colorize img"><div class="image-colorize:hover img">
+      <img  src="img/trophy.jpg" alt="mundial" style="width:100%"></div></div></div>
+    
+      <div class="figcaption" style="text-align: center"><Fig class="1">Οι πιο χαρακτηριστικές στιγμές από όλα τα χρόνια διοργάνωσης του Mundial </Fig></div>
+      </class>
+    </div>
+  
+      <style>
+        @media screen and (min-width: 701px) and (max-width: 10000px) {
+        table, th, td {
+          border-collapse: collapse;
+          border-spacing: 15px;
+          
+        }
+        th, td {
+          padding: 5px;
+          text-align: center; 
+          font-style: italic;   
+        }
+        table.centerer {
+          margin-left: auto; 
+          margin-right: auto;
+        }
+        table.dilwsi{
+          font-style: italic;  
+        }
+
+        }
+        @media screen and (min-width: 350px) and (max-width: 700px) {
+          table, th, td {
+          border-collapse: collapse;
+          border-spacing: 15px;
+          
+        }
+        th, td {
+          padding: 5px;
+          text-align: center; 
+          font-style: italic;   
+        }
+        table.centerer {
+          margin-left: auto; 
+          margin-right: auto;
+        }
+        .column {
+          width: 100%;
+  }
+        .hscroll{
+          overflow-x: auto;
+        }  
+        }
+        </style> 
+        <br>    
+
+
+</div>
+  <br>
+</div>
+<br><br>
+<div class="parent"> 
+  <div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading"><input type="checkbox" role="button" 
+
+    id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" 
+    
+    lang="el" dir="ltr"><h2 id="mw-toc-heading">Πίνακας περιεχομένων</h2><span class="toctogglespan">
+    <label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+    <ul>
+    <li class="toclevel-1 tocsection-1"><a href="#Trophy"><span class="tocnumber">1.</span> <span class="toctext">Κύπελλο</span></a></li>
+    <li class="toclevel-1 tocsection-2"><a href="#Winners"><span class="tocnumber">2.</span> <span class="toctext">Επιτυχημένες εθνικές ομάδες</span></a></li>
+    <li class="toclevel-1 tocsection-3"><a href="#Tv"><span class="tocnumber">3.</span> <span class="toctext">Παγκόσμιο κύπελλο και τηλεόραση</span></a></li>
+    <li class="toclevel-1 tocsection-4"><a href="#Choices"><span class="tocnumber">4.</span> <span class="toctext">Διοργανωτές</span></a></li>
+    </ul>
+    </div>
+    <br>
+    </div></div>
+
+
+    <div class="wrapper">
+      <div class="figure">
+  <article>
+    <h3><span id="Trophy"></span><span class="Trophy" id="Trophy">Κύπελλο</span><span class="Trophy"><span ></span><a href="/w/index.php?title=%CE%A3%CF%84%CE%AD%CF%86%CE%B1%CE%BD%CE%BF%CF%82_%CE%A4%CF%83%CE%B9%CF%84%CF%83%CE%B9%CF%80%CE%AC%CF%82&amp;veaction=edit&amp;section=1" class="Trophy" title="Trophy"></a><span class="Trophy">  </span><a href="/w/index.php?title=%CE%A3%CF%84%CE%AD%CF%86%CE%B1%CE%BD%CE%BF%CF%82_%CE%A4%CF%83%CE%B9%CF%84%CF%83%CE%B9%CF%80%CE%AC%CF%82&amp;action=edit&amp;section=1" title="Trophy"></a><span class="Trophy"></span></span></h3>
+  
+    <p><span class="dropcap">Α</span> πό το 1930 μέχρι το 1970, στους νικητές απονεμόταν το τρόπαιο Ζιλ Ριμέ (φωτό). Αρχικά ήταν γνωστό ως Παγκόσμιο Κύπελλο, αλλά το 1946 μετονομάστηκε σε "Ζιλ Ριμέ" προς τιμήν του ανθρώπου που διοργάνωσε το πρώτο Παγκόσμιο Κύπελλο. Στο Παγκόσμιο Κύπελλο Ποδοσφαίρου του 1970, η ποδοσφαιρική ομάδα της Βραζιλίας κατέκτησε το Παγκόσμιο Κύπελλο για τρίτη φορά και αποφασίστηκε το τρόπαιο να της παραχωρηθεί μόνιμα, δυστυχώς όμως το 1983 εκλάπη από το μουσείο της ποδοσφαιρικής ομοσπονδίας της χώρας και δεν βρέθηκε ποτέ.[4]
+
+      Μετά το 1970, σχεδιάστηκε ένα νέο τρόπαιο, γνωστό ως Τρόπαιο του Παγκόσμιου Κυπέλλου. Μετά την κλοπή του "Ζιλ Ριμέ", αποφασίστηκε να μη δοθεί ξανά σε κανέναν μόνιμα, όσες φορές και αν το κατακτήσει μια ομάδα. Η Αργεντινή, η Γερμανία (ως Δυτική Γερμανία), η Ιταλία κι η Βραζιλία, έχουν κερδίσει το δεύτερο τρόπαιο δύο φορές. Το τρόπαιο δεν θα αντικατασταθεί μέχρι το 2038, οπότε και θα συμπληρωθεί ο χώρος στο κύπελλο, όπου αναγράφονται τα ονόματα των τροπαιούχων.
+      
+      Το τρόπαιο είναι από χρυσό 18 καρατίων, έχει ύψος 36 εκατοστά, βάρος 4,97 κιλά το ίδιο και 6 η βάση του, η οποία αποτελείται από δύο στρώματα ημιπολύτιμου μαλαχίτη. Σε αυτήν αναγράφονται οι χρονιές και οι νικητές του κυπέλλου από το 1974 και έπειτα.
+      
+      Οι νικητές κρατούν το κύπελλο για 4 χρόνια, μέχρι την επόμενη διοργάνωση και ύστερα παίρνουν ένα επιχρυσωμένο ακριβές αντίγραφο.</p>
+  </article>
+      
+      <br><br>
+  <div class="row">
+    <div class="column">
+      <img src="img/Maradona.jpg" alt="Maradona" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="img/Mbappe.jpg" alt="Mbappe" style="width:100%">
+    </div>
+  </div>
+  <div class="row">
+    <div class="column">
+       <div class="figcaption" style="text-align: center">
+            <Fig class="2">Ο Diego Maradona νικητής του Mundial το 1988</Fig></div>
+    </div>
+    <div class="column">
+       <div class="figcaption" style="text-align: center">
+            <Fig class="2">Ο Kylian Mbappe νικητής του Mundial το 2018</Fig></div>
+        </div>
+      </div>
+  
+  <br>
+   
+</div>
+
+</div></div></div>
+<br><br>
+</div>
+
+
+<div class="wrapper">
+   <div class="figure">
+
+<article>
+  <h3><span id="Winners"></span><span class="Winners" id="Winners">Επιτυχημένες εθνικές ομάδες</span><span class="Winners"><span ></span><a href="/w/index.php?title=%CE%A3%CF%84%CE%AD%CF%86%CE%B1%CE%BD%CE%BF%CF%82_%CE%A4%CF%83%CE%B9%CF%84%CF%83%CE%B9%CF%80%CE%AC%CF%82&amp;veaction=edit&amp;section=2" class="Participation_and_results" title="Winners"></a><span class="Winners">  </span><a href="/w/index.php?title=%CE%A3%CF%84%CE%AD%CF%86%CE%B1%CE%BD%CE%BF%CF%82_%CE%A4%CF%83%CE%B9%CF%84%CF%83%CE%B9%CF%80%CE%AC%CF%82&amp;action=edit&amp;section=2" title="Winners"></a><span class="Winners"></span></span></h3>
+  
+ <p><span class="dropcap">Έ</span>ξι από τους οχτώ πρωταθλητές έχουν κατακτήσει τουλάχιστον έναν από τους τίτλους ως διοργανωτές. Εξαίρεση αποτελούν η Βραζιλία, η οποία καμία από τις δύο φορές που διοργάνωσε το Παγκόσμιο Κύπελλο δεν το κατέκτησε (το 1950 έχασε στον τελικό από την Ουρουγουάη και το 2014 τερμάτισε στην τέταρτη θέση) και η Ισπανία (το 1982 αποκλείστηκε στη δεύτερη φάση των ομίλων). Η Αγγλία το 1966 έχει κερδίσει τον μοναδικό τίτλο της ως διοργανώτρια. Η Ουρουγουάη, η Ιταλία, η Γαλλία κι η Αργεντινή κατέκτησαν τα πρώτα τους τρόπαια ως διοργανωτές αλλά έχουν αναδειχθεί παγκόσμιοι πρωταθλητές κι άλλες φορές
+  </p>
+</article>  
+  <br>
+  <link rel="stylesheet" type="text/css" href="table.css">
+  <script type="text/javascript">
+    function hide_show_table(col_name)
+    {
+     var checkbox_val=document.getElementById(col_name).value;
+     if(checkbox_val=="hide")
+     {
+      var all_col=document.getElementsByClassName(col_name);
+      for(var i=0;i<all_col.length;i++)
+      {
+       all_col[i].style.display="none";
+      }
+      document.getElementById(col_name+"_head").style.display="none";
+      document.getElementById(col_name).value="show";
+     }
+        
+     else
+     {
+      var all_col=document.getElementsByClassName(col_name);
+      for(var i=0;i<all_col.length;i++)
+      {
+       all_col[i].style.display="table-cell";
+      }
+      document.getElementById(col_name+"_head").style.display="table-cell";
+      document.getElementById(col_name).value="hide";
+     }
+    }
+  </script>  
+    
+  
+    
+    
+    
+    
+    <div id="checkbox_div" allign="center">
+      <p>Εμφάνιση/Απόκρυψη στήλης</p>
+      <li><input type="checkbox" value="hide" id="team_col" onchange="hide_show_table(this.id);">Ομάδα</li>
+      <li><input type="checkbox" value="hide" id="first_col" onchange="hide_show_table(this.id);">Πρώτη θέση</li>
+      <li><input type="checkbox" value="hide" id="second_col" onchange="hide_show_table(this.id);">Δεύτερη θέση</li>
+      <li><input type="checkbox" value="hide" id="third_col" onchange="hide_show_table(this.id);">Τρίτη θέση</li>
+      <li><input type="checkbox" value="hide" id="fourth_col" onchange="hide_show_table(this.id);">Τέταρτη θέση</li>
+     </div>
+
+
+    <div class="hscroll">
+    <table id="team_table" allign="center" cellpadding=10>
+    <tr>
+     <th id="team_col_head" onclick="sortTable(0)">Ομάδα</th>
+     <th id="first_col_head" onclick="sortTable(1)">Πρώτη θέση</th>
+     <th id="second_col_head" onclick="sortTable(2)">Δεύτερη θέση</th>
+     <th id="third_col_head" onclick="sortTable(3)">Τρίτη θέση</th>
+     <th id="fourth_col_head" onclick="sortTable(4)">Τέταρτη θέση</th>
+    </tr>
+
+    
+    <tr>
+    
+      <td width=20% class="team_col">Βραζιλία</td>
+      <td width=20% class="first_col">5 (1958, 1962,1970, 1994, 2002)</td>
+      <td width=20% class="second_col">2 (1950*, 1998)</td>
+      <td width=20% class="third_col">	2 (1938, 1978)</td>
+      <td width=20% class="fourth_col">	2 (1974, 2014*)</td>
+     
+     </tr>
+     
+     <tr>
+      
+      <td width=20% class="team_col">Γερμανία</td>
+      <td width=20% class="first_col">4 (1954, 1974*, 1990, 2014)</td>
+      <td width=20% class="second_col">4 (1966, 1982, 1986, 2002)</td>
+      <td width=20% class="third_col">4 (1934, 1970, 2006*, 2010)</td>
+      <td width=20% class="fourth_col">1 (1958)</td>
+     </tr>
+     
+     <tr>
+      
+      <td width=20% class="team_col">Ιταλία</td>
+      <td width=20% class="first_col">4 (1934*, 1938, 1982, 2006)</td>
+      <td width=20% class="second_col">2 (1970, 1994)</td>
+      <td width=20% class="third_col">1 (1990*)</td>
+      <td width=20% class="fourth_col">1 (1978)</td>
+     </tr>
+     
+     <tr>
+      
+         <td width=20% class="team_col">Αργεντινή</td>
+         <td width=20% class="first_col">2 (1978*, 1986)</td>
+         <td width=20% class="second_col">3 (1930, 1990, 2014)</td>
+         <td width=20% class="third_col">-</td>
+         <td width=20% class="fourth_col">-</td>
+     </tr>
+     
+    
+    </table>
+  </div> 
+  <br><br>
+<p><span class="dropcap">Η</span>Γερμανία κέρδισε το δεύτερό της μουντιάλ ως διοργανώτρια. Τα περισσότερα έθνη είχαν αρκετά καλές πορείες όταν το κύπελλο διεξήχθη στις χώρες τους. Η Σουηδία αγωνίστηκε στον τελικό του 1958 κι η Νότια Κορέα προχώρησε μέχρι τους ημιτελικούς του 2002 ως συνδιοργανώτρια, παρά το γεγονός ότι μέχρι τότε δεν είχε προκριθεί ποτέ από τον πρώτο γύρο. Το Μεξικό έφτασε μέχρι τα προημιτελικά δυο φορές και τις δύο ως διοργανώτρια χώρα. Η επιτυχία σε ένα Παγκόσμιο Κύπελλο αποτελεί έναν από τους λόγους που τα κράτη πασχίζουν και πιέζουν προς κάθε κατεύθυνση για να αναλάβουν τη διοργάνωση του, καθώς σε μια τέτοια περίπτωση η υποστήριξη των φιλάθλων αποτελεί τον 12ο παίκτη.</p>
+<br>
+
+
+<style>
+table {
+  border-spacing: 15%;
+  width: 100%;
+  border: 1px solid #ddd;
+  
+}
+
+th {
+  cursor: pointer;
+  text-align: center;
+  width:20%;
+}
+
+th, td {
+  text-align: center;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #cbeed0
+}
+tr:nth-child(odd) {
+  background-color: #2c922c
+}
+</style>
+
+
+</div>
+ 
+  
+   <br><br><br><br>
+  </div>
+  <div class="wrapper"> 
+  <div class="figure">
+    <article>
+      <h3><span id="Tv"></span><span class="Tv" id="Tv">Παγκόσμιο κύπελλο και τηλεόραση</span><span class="Tv"><span ></span><a href="/w/index.php?title=%CE%A3%CF%84%CE%AD%CF%86%CE%B1%CE%BD%CE%BF%CF%82_%CE%A4%CF%83%CE%B9%CF%84%CF%83%CE%B9%CF%80%CE%AC%CF%82&amp;veaction=edit&amp;section=3" class="Tv" title="Tv"></a><span class="Tv">  </span><a href="/w/index.php?title=%CE%A3%CF%84%CE%AD%CF%86%CE%B1%CE%BD%CE%BF%CF%82_%CE%A4%CF%83%CE%B9%CF%84%CF%83%CE%B9%CF%80%CE%AC%CF%82&amp;action=edit&amp;section=3" title="Tv"></a><span class="Tv"></span></span></h3>
+  <p><span class="dropcap">Τ</span>ο πρώτο Παγκόσμιο Κύπελλο που καλύφθηκε από την τηλεόραση ήταν του 1954. Σήμερα το μουντιάλ αποτελεί το αθλητικό γεγονός που έχει τη μεγαλύτερη τηλεθέαση στον κόσμο, ξεπερνώντας ακόμα και τους Ολυμπιακούς αγώνες. Οι τηλεθεατές που παρακολούθησαν το παγκόσμιο κύπελλο του 2002 έφτασαν τα 2,82 δισεκατομμύρια, ενώ τον τελικό παρακολούθησαν 1,1 δις άνθρωποι. Την κλήρωση των ομίλων εκείνου του μουντιάλ παρακολούθησαν 300 εκατομμύρια τηλεθεατές.
+
+    Κάθε μουντιάλ συνήθως έχει τη δική του μασκότ. Ο Γουΐλι, στη διοργάνωση του 1966, ήταν η πρώτη μασκότ σε μουντιάλ. Οι μασκότ του 2006 ήταν ο Γκολέο το λιοντάρι κι ο Πίλε η μπάλα.</p>
+ 
+</div>
+  </article>
+  </div>
+ 
+  <br><br>
+</div>
+  
+<div class="wrapper"> 
+  <div class="figure">
+  <article>
+    <h3><span id="#Choices"></span><span class="Choices" id="Choices">Διοργανωτές</span><span class="Choices"><span ></span><a href="/w/index.php?title=%CE%A3%CF%84%CE%AD%CF%86%CE%B1%CE%BD%CE%BF%CF%82_%CE%A4%CF%83%CE%B9%CF%84%CF%83%CE%B9%CF%80%CE%AC%CF%82&amp;veaction=edit&amp;section=4" class="Choices" title="Choices"></a><span class="Choices">  </span><a href="/w/index.php?title=%CE%A3%CF%84%CE%AD%CF%86%CE%B1%CE%BD%CE%BF%CF%82_%CE%A4%CF%83%CE%B9%CF%84%CF%83%CE%B9%CF%80%CE%AC%CF%82&amp;action=edit&amp;section=4" title="Choices"></a><span class="Choices"></span></span></h3>
+    <p><span class="dropcap">Η</span>διοργάνωση των πρώτων μουντιάλ δίνονταν στις χώρες κατά τη διάρκεια των συναντήσεων της συνέλευσης της FIFA. Η επιλογή της τοποθεσίας διεξαγωγής των αγώνων υπήρξε τότε πεδίο αντιπαράθεσης, ιδιαίτερα ανάμεσα στις χώρες της Λατινικής Αμερικής και της Ευρώπης, τα δύο ποδοσφαιρικά κέντρα της εποχής, αλλά και του σήμερα. Κι αυτό γιατί τις δύο ηπείρους χώριζε ταξίδι τριών εβδομάδων με πλοίο. Για παράδειγμα, η επιλογή της Ουρουγουάης ως τη χώρα που θα διοργάνωνε το πρώτο μουντιάλ, οδήγησε στη συμμετοχή μόνο τεσσάρων ευρωπαϊκών εθνικών ομάδων στο τουρνουά. Τα δύο επόμενα Παγκόσμια Κύπελλα διεξήχθησαν στην Ευρώπη και ιδιαίτερα η απόφαση για το δεύτερο συνεχόμενο μουντιάλ στην Ευρώπη το 1938, αποτέλεσε πεδίο διαμάχης, καθώς οι αμερικάνικες ομάδες ήθελαν το μουντιάλ να εναλλάσσεται διαδοχικά ανάμεσα στις δύο ηπείρους. Το αποτέλεσμα ήταν οι εθνικές ομάδες της Αργεντινής και της Ουρουγουάης να μποϊκοτάρουν το Παγκόσμιο Κύπελλο του 1938, στη Γαλλία.
+
+      Μετά το Παγκόσμιο Κύπελλο του 1958, για να αποφευχθούν μελλοντικές αντιπαραθέσεις και μποϊκοτάζ, η FIFA αποφάσισε την εναλλάξ διοργάνωση από χώρες των δύο ηπείρων, μέχρι και το μουντιάλ της Γαλλίας του 1998. Το Παγκόσμιο Κύπελλο του 2002, το οποίο συνδιοργανώθηκε από την Ιαπωνία και τη Νότια Κορέα, ήταν το πρώτο που διεξήχθη στην Ασία (και γενικότερα το πρώτο σε χώρα εκτός Ευρώπης και Αμερικής), ενώ το μουντιάλ του 2010 στη Νότια Αφρική ήταν το πρώτο που διοργανώθηκε από αφρικάνικο κράτος.
+      
+      Το 2003, προσδιορίστηκε η Νότια Αμερική ως η ήπειρος όπου θα διεξαχθεί το μουντιάλ του 2014 και εκλήθησαν να τοποθετηθούν τα μέλη της νοτιοαμερικανικής συνομοσπονδίας (CONMEBOL) για την πρόταση της FIFA. Πολύ σύντομα όλα τα κράτη υποστήριξαν την υποψηφιότητα της Βραζιλίας για να αναλάβει τη διοργάνωση και (έστω και ανεπίσημα) είχε επί της ουσίας καθοριστεί ο διοργανωτής του Παγκόσμιου Κυπέλλου του 2014, με τη Βραζιλία να αναλαμβάνει τελικά και επισήμως τη διοργάνωση.
+      
+      Το σύστημα επιλογής της διοργανώτριας χώρας εξελίχθηκε έτσι ώστε σήμερα η επιλογή γίνεται από μια ειδική επιτροπή της FIFA. Η επίσημη επιλογή γίνεται έξι χρόνια πριν τη διεξαγωγή του τουρνουά.</p>
+  </article>
+  </div>
+ 
+ <br><br><br><br>
+</div>
+
+
+  </div>
+  
+ 
+
+</body>
+</html>
+
+

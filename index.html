@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="manifest.json">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="img/icon.jpg" type="image/x-icon">
+    <title>Mundial</title>
+
+  </head>
+
+
+    </head>
+
+
+<body>
+
+
+  <div class="navbar">
+    <a href="registration.html">Εγγραφή</a>
+    <a href="contact.html">Επικοινωνία</a>
+    <a href="istoria.html">Ιστορία</a>
+    <a href="index.html">Αρχική σελίδα</a>
+   
+  </div>
+
+
+    
+    
+    <div class="main">
+      <div class="wrapper">
+        <header>
+          <h1>Mundial: Παγκόσμιο Κύπελλο Ποδοσφαίρου</h1>
+        </header>
+    
+
+    <div class="slideshow-container">
+    
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="img/Mundial.jpg" style="width:100%">
+        <div class="text">Το κύπελλο όλων των κυπέλλων</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="img/first.jpg" style="width:100%">
+        <div class="text">Η πρώτη ομάδα που κέρδισε το Mundial</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="img/Qatar-mundial.jpg" style="width:100%">
+        <div class="text">Mundial στο Qatar</div>
+      </div>
+      
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+      </div>
+      <br>
+      
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+      </div>
+ 
+    
+    
+    <section class="columns">
+
+      <div class="column" id="mundial">
+        <p>Το Παγκόσμιο Κύπελλο Ποδοσφαίρου(αγγλικά: FIFA World Cup) ή αλλιώς Μουντιάλ(Mundial) 
+          είναι μια ποδοσφαιρική διοργάνωση, η οποία πραγματοποιείται κάθε τέσσερα χρόνια υπό την αιγίδα της 
+          Διεθνούς Ποδοσφαιρικής Ομοσπονδίας (ΦΙΦΑ). Σε αυτήν παίρνουν μέρος οι εθνικές ομάδες των χωρών μελών της 
+          ομοσπονδίας, οι οποίες κατάφεραν να προκριθούν ύστερα από προκριματικούς αγώνες. Θεωρείται η κορυφαία 
+          ποδοσφαιρική διοργάνωση, η οποία καταφέρνει να προσελκύσει πλήθος θεατών, τηλεθεατών και χορηγών.</p>
+
+          <br><br>
+          <p>Απο τις 32 ομάδες του Μουντιάλ, οι 13 θα είναι Eυρωπαϊκές. Η προκριματική διαδικασία στην Ευρώπη αποτελείται απο 10 ομίλους 
+            με τον πρώτο σε κάθε όμιλο να παίρνει απευθείας την πρόκριση. Στην φάση των play-off θα αγωνιστούν οι δεύτεροι του κάθε ομίλου, 
+            ενώ σε αυτούς θα προστεθούν και οι δύο επιλαχούσες χώρες που προέκυψαν από το UEFA Nations League 2020-2021 (δηλαδή οι νικητές των ομίλων 
+            που δεν τερμάτισαν στην πρώτη δυάδα και θα οριστούν βάσει της τελικής κατάταξης του Nations League). Οι 12 αυτές ομάδες θα αγωνιστούν 
+            σε αγώνες νοκ-αουτ σε δύο φάσεις πρόκρισης (των 12 και των 6), με τους τρεις τελικούς νικητές να εξασφαλίζουν τα τελευταία Ευρωπαϊκά εισιτήρια.</p>
+            <br><br>
+          <iframe width="480" height="345" src="https://www.youtube.com/embed/WIaWTESJjrg?autoplay=1&mute=1">
+          </iframe>
+      </div>
+
+     
+     
+     
+      <div class="column">
+        
+        
+      
+        <select id="col_hide">
+          <option value="0" selected>Απόκρυψη στήλης</option>
+          <option value="a" >Απόκρυψη διοργανώτριας</option>
+          <option value="b" >Απόκρυψη τελικού</option>
+          <option value="c" >Απόκρυψη αποτελέσματος</option>
+          <option value="d" >Απόκρυψη αριθμού ομάδων</option>
+          <option value="e" >Απόκρυψη έτους</option>
+          <option value="f" >Επαναφορά</option>
+        </select>  
+        
+        <div class="hscroll">
+          <table id="katataxi" class="t05" width=100% allign="center">
+            
+            <h5><b>Αναλυτικά αποτελέσματα για όλες τις χρονιές διεξαγωγής του Παγκόσμιου Κυπέλλου</b></h5>
+            
+            <tr>
+              
+              <th onclick="sortTable5(0)">Έτος</th>
+              <th onclick="sortTable5(1)">Διοργανώτρια</th>
+              <th onclick="sortTable5(2)">Τελικός</th>
+              <th onclick="sortTable5(3)">Αποτέλεσμα</th>
+              <th onclick="sortTable5(4)">Αριθμός ομάδων</th>
+             
+            </tr>
+            
+          </table>
+          </div>
+          <caption allign="center"><button onclick="toggleTable1()">Εμφάνιση/Απόκρυψη Πίνακα</button></caption>
+
+
+
+</div>
+      
+      
+      <div class="column">
+        <h2>Mundial</h2>
+          <b>Πρώτο έτος διεξαγωγής:</b> 1928 <br>
+          <b>Πρόεδρος:</b> Ζιλ Ριμέ <br>
+          <b>Επιτροπή:</b> Μπονέ, Μέισλ, Ντελονέ, Φερετί και Λίνεμαν <br>
+          <b>Πρώτη χώρα διεξαγωγής:</b> Ουρουγουάη<br>
+          <b>Πρώτη κλήρωση για τους 4 ομίλους:</b> 7 Ιουλίου 1930  <br>
+          <b>Ομάδες που συμμετείχαν:</b> 13 <br>
+          <b>Πρώτος διαιτητής:</b> Ντομίνγκο Λομπάρντι <br>
+          <b>Πρώτος σκόρερ στο παγκόσμιο κύπελλο:</b> Λοράν <br>
+          <br> <br> <br>
+          <h4>Τελική φάση</h4>
+          <p>
+            Στη σημερινή τελική φάση του Μουντιάλ μετέχουν 32 εθνικές ομάδες που αγωνίζονται για έναν περίπου 
+            μήνα στα γήπεδα της διοργανώτριας χώρας. Η τελική φάση, με τη σειρά της, χωρίζεται σε δυο επιμέρους φάσεις, 
+            σε αυτή των ομίλων και των νοκ άουτ αγώνων.Στη φάση των ομίλων, οι ομάδες χωρίζονται σε οκτώ ομίλους των τεσσάρων 
+            ομάδων. Οι οκτώ καλύτερες ομάδες του μουντιάλ μπαίνουν επικεφαλής σε κάθε όμιλο. Οι υπόλοιπες ομάδες κατανέμονται 
+            τυχαία. Από το μουντιάλ του 1998, έχουν θεσπιστεί περιορισμοί για να διασφαλίσουν ότι κανένας όμιλος 
+            δεν θα περιέχει 2 ευρωπαϊκές ομάδες, ή περισσότερες από μία ομάδα από κάθε άλλη συνομοσπονδία. 
+            Έτσι, η κάθε ομάδα δίνει τρεις αγώνες στον όμιλό της, ενώ στον τελευταίο γύρο οι αγώνες του ομίλου γίνονται 
+            ταυτόχρονα ώστε να είναι δίκαιο για όλες τις ομάδες.Οι δύο πρώτες ομάδες του κάθε ομίλου προκρίνονται για τη φάση των 
+            νοκ άουτ αγώνων. Η βαθμολογία των ομάδων στους ομίλους γίνεται με πόντους. Από το 1994, η νίκη ισούται με τρεις πόντους, 
+            η ισοπαλία ισούται με έναν πόντο και η ήττα δεν δίνει πόντο.  <br>
+         </p>
+        </div>
+     </div>   
+        
+        
+      
+          <script src="js/main.js"></script>
+    </body>
+    <script>
+      function passvalues()
+      {
+          var name=document.getElementById("txt").value;
+          localStorage.setItem("textvalue",name);
+          return false;
+      }
+      if
+  ("serviceWorker" in navigator)
+  {
+      navigator.serviceWorker.register("sw.js").then(register=>
+      {
+      console.log("SW Registerd!");
+      console.log(registration);
+  
+  }).catch(error => {
+      console.log("SW Registerd Faild!");
+      console.log(error);
+  });
+  }
+  
+      
+  </script>
+    </html> 
+    

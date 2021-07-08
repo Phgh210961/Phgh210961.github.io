@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="img/reg.png" type="image/x-icon">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /*background-color:  #04AA6D;*/
+  background-image: url(img/green.jpg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+
+.registerbtn {
+  background-color: #04aa04;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+  background-color: #267c2a;
+}
+
+
+a {
+  color: dodgerblue;
+}
+
+
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+.navbar {
+overflow: hidden;
+background-color: rgb(43, 201, 29);
+position: fixed;
+top: 0;
+width: 100%;
+}
+
+.navbar a {
+float: right;
+display: block;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+
+.navbar a:hover {
+background: #ddd;
+color: black;
+}
+
+</style>
+</head>
+<body>
+
+  <div class="navbar"> 
+    <a href="registration.html">Εγγραφή</a>
+    <a href="contact.html">Επικοινωνία</a>
+    <a href="istoria.html">Ιστορία</a>
+    <a href="index.html">Αρχική σελίδα</a> 
+  </div>
+<h2>keno</h2>  
+<form action="/action_page.php">
+  <div class="container">
+    <h1>Εγγραφή</h1>
+    <p>Παρακαλούμε συμπληρώστε τα παρακάτω στοιχεία για να δημιουργήσετε έναν λογαριασμό.</p>
+    <hr>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Εισάγετε Email" name="email" id="email" required>
+
+    <label for="psw"><b>Κωδικός</b></label>
+    <input type="password" placeholder="Εισάγετε Κωδικό" name="psw" id="psw" required>
+
+    <label for="psw-repeat"><b>Επανάληψη κωδικού</b></label>
+    <input type="password" placeholder="Επαναλάβετε τον κωδικό" name="psw-repeat" id="psw-repeat" required>
+    <hr>
+    <p>Δημιουργώντας λογαριασμό συμφωνείτε με τους <a href="#">Όρους και Προϋποθέσεις</a>.</p>
+
+    <button type="submit" class="registerbtn" onclick="myFunction()">Εγγραφή</button>
+    
+  </div>
+  
+  <div class="container signin">
+    <p>Έχετε ήδη λογαριασμό; <a href="#">Είσοδος</a>.</p>
+  </div>
+</form>
+
+
+
+<!--<button onclick="myFunction()">Εγγραφή</button>-->
+
+<script type="text/javascript">
+function myFunction() {
+
+     alert("Η εγγραφή σας πραγματοποιήθηκε με επιτυχία. Σας ευχαριστούμε!");
+ 
+}
+window.addEventListener("beforeunload", function (e) {
+ var confirmationMessage = 'Είστε σίγουροι ότι θέλετε να αποχωρίσετε από τη σελίδα;' + 'Όποιες αλλαγές κάνατε θα χαθούν.';
+ (e || window.event).returnValue = confirmationMessage; 
+
+ });
+</script>
+</body>
+</html>

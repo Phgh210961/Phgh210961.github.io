@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="img/message.png" type="image/x-icon">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;
+  background-image: url(img/green.jpg);}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04aa04;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+h2{
+  text-align: center;
+  color: white;
+}
+h3{
+  color: white;
+}
+input[type=submit]:hover {
+  background-color: #267c2a;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.navbar {
+overflow: hidden;
+background-color: rgb(43, 201, 29);
+position: fixed;
+top: 0;
+width: 100%;
+}
+
+.navbar a {
+float: right;
+display: block;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+
+.navbar a:hover {
+background: #ddd;
+color: black;
+}
+
+</style>
+</head>
+<body>
+  
+  <div class="navbar"> 
+    <a href="registration.html">Εγγραφή</a>
+    <a href="contact.html">Επικοινωνία</a>
+    <a href="istoria.html">Ιστορία</a>
+    <a href="index.html">Αρχική σελίδα</a> 
+  </div>
+
+<h2>Θα χαρούμε να επικοινωνήστε μαζί μας.</h2>
+<br>
+<h3>Φόρμα επικοινωνίας</h3>
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="fname">Όνομα</label>
+    <input type="text" id="fname" name="firstname" placeholder="Το όνομά σας..">
+
+    <label for="lname">Επώνυμο</label>
+    <input type="text" id="lname" name="lastname" placeholder="Το επώνυμό σας..">
+
+    <label for="country">Χώρα</label>
+    <select id="country" name="country">
+        <option value="europe">Ευρώπη</option>
+      <option value="australia">Αυστραλία</option>
+      <option value="canada">Καναδάς</option>
+      <option value="usa">ΗΠΑ</option>
+      <option value="asia">Ασία</option>
+
+    </select>
+
+    <label for="subject">Θέμα</label>
+    <textarea id="subject" name="subject" placeholder="Γράψτε κάτι.." style="height:200px"></textarea>
+
+    <input type="submit" value="Υποβολή" onclick="myFunction()">
+  </form>
+</div>
+
+<script type="text/javascript">
+    function myFunction() {
+    
+         alert("Η φόρμα επικοινωνίας σας υποβλήθηκε με επιτυχία. Σας ευχαριστούμε!");
+     
+    }
+    window.addEventListener("beforeunload", function (e) {
+     var confirmationMessage = 'Είστε σίγουροι ότι θέλετε να αποχωρίσετε από τη σελίδα;' + 'Όποιες αλλαγές κάνατε θα χαθούν.';
+     (e || window.event).returnValue = confirmationMessage; 
+    
+     });
+    </script>
+</body>
+</html>
