@@ -4,7 +4,7 @@ self.addEventListener("install", e=> {
             {
                 return cache.addAll(["./istoria.html","./index.html","./contact.html","./registration.html",
                  "./Mundial.jpg","./first.jpg","./Qatar-mundial.jpg","./trophy.jpg",
-                "./Maradona.jpg","./Mbappe.jpg","./ball.png","./green.jpg","./message.png","./ball.png","./reg.png"
+                "./Maradona.jpg","./Mbappe.jpg","./ball.png","./green.jpg","./message.png","./icon.png","./reg.png"
             ])
             })
     );
